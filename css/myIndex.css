@@ -1,0 +1,306 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none ;
+	border: none;
+}
+.nav{
+	background-color: #563d7c;
+	border-bottom: 1px solid #83739C;
+	box-shadow: 0 1px 0 rgba(255,255,255,.1);
+}
+.nav .navbar{
+	width: 1000px;
+	margin: 0 auto;
+	color: #cdbfe3;
+	overflow: hidden;
+}
+.nav .navbar li{
+	float: left;
+	padding: 15px 15px;
+    font-size: 14px;
+    line-height: 20px;
+	cursor: pointer;
+}
+.nav .navbar li.header{
+	color:#fff;
+	font-size: 18px;
+}
+.nav .navbar li.active{
+	color: #fff;
+    background-color: #463265;
+}
+.nav .navbar li:hover{
+	color: #fff;
+}
+.showSection{
+	background-color: #563d7c;
+}
+.showSection .wrap{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 30px 15px 40px;
+	display: none;
+}
+.showSection .wrap h1{
+	font-size: 60px;
+    line-height: 1;
+	color: #fff;
+	margin:20px 380px 10px 0;
+}
+.showSection .wrap p{
+	font-size: 21px;
+    line-height: 1;
+	color: #cdbfe3;
+	margin:0 380px 10px 0;
+}
+.content{
+	width: 1000px;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: 30px auto;
+}
+.content .leftNav{
+	width: 250px;
+	float: left;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+.content .leftNav ul{
+	background-color: #f7f5fa;
+}
+.content .leftNav ul li{
+	color: #337ab7;
+	padding: 5px 20px;
+	cursor: pointer;
+	padding: 10px 15px;
+}
+.content .leftNav ul li:hover{
+	color:black;
+}
+.content .leftNav ul li.selected{
+	color: #fff;
+    background-color: #337ab7;
+	border-radius: 4px;
+
+}
+.content .rightContent{
+	width: 750px;
+	float: left;
+	box-sizing: border-box;
+	padding-left:50px;
+}
+.content .rightContent>div{
+	display: none;
+}
+.content .rightContent>div.chose{
+	background-color: #fff;
+    border: 1px solid #bce8f1;
+	border-radius: 4px;
+	display: block;
+}
+.content .rightContent>div.chose .choseHeader{
+	font-size: 20px;
+	color: #31709c;
+    background-color: #d9edf7;
+	border-color: #bce8f1;
+	padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.content .rightContent>div.chose .choseBody{
+	padding: 15px;
+}
+.content .rightContent>div.chose .choseBody .choseBodyTable{
+	border-spacing: 0;
+	border-collapse: collapse;
+	/* width: 100%; */
+	margin-bottom: 20px;
+}
+.content .rightContent>div.chose .choseBody .choseBodyTable tr{
+	display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.content .rightContent>div.chose .choseBody .choseBodyTable tr td,.content .rightContent>div.chose .choseBody .choseBodyTable tr th{
+	padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+	border-top: 1px solid #ddd;
+	text-align: center;
+	color: #31709c;
+}
+.content .rightContent>div.chose .choseBody .choseBodyTable tr td:first-child,.content .rightContent>div.chose .choseBody .choseBodyTable tr th:first-child{
+	width: 50px;
+}
+.content .rightContent>div.chose .choseBody .choseBodyTable tr td:nth-child(2),.content .rightContent>div.chose .choseBody .choseBodyTable tr th:nth-child(2){
+	width: 50px;
+}
+.content .rightContent>div.chose .choseBody .choseBodyTable tr td:nth-child(3),.content .rightContent>div.chose .choseBody .choseBodyTable tr th:nth-child(3){
+	width: 450px;
+}
+.content .rightContent>div.chose .choseBody .choseBodyTable tr td:last-child,.content .rightContent>div.chose .choseBody .choseBodyTable tr th:last-child{
+	width: 50px;
+}
+.content .rightContent>div.chose .choseBody .choseBodyTable tr td:last-child input{
+	padding: 3px 8px;
+	border-radius: 3px;
+	color: #fff;
+    background-color: #d9534f;
+	border-color: #d43f3a;
+	text-align: center;
+	cursor: pointer;
+}
+
+.content .rightContent>div.chose .delete{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: all linear 0.5s;
+	display: none;
+}
+.content .rightContent>div.chose .delete .deletePanel{
+	position: relative;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-75%);
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+	border-radius: 6px;
+	width: 400px;
+	height: 200px;
+	transition: all linear 0.5s;
+}
+.content .rightContent>div.chose .delete .deletePanel .deletePanelHeader{
+	padding: 15px;
+	font-size: 18px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.content .rightContent>div.chose .delete .deletePanel .deletePanelHeader .close{
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	padding: 10px;
+	cursor: pointer;
+}
+.content .rightContent>div.chose .delete .deletePanel .deletePanelBody{
+	position: relative;
+	padding: 15px;
+	
+	font-size: 14px;
+}
+.content .rightContent>div.chose .delete .deletePanel .deletePanelFooter{
+	padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+.content .rightContent>div.chose .delete .deletePanel .deletePanelFooter input[value="确定"],.content .rightContent>div.chose .delete .deletePanel .deletePanelFooter input[value="取消"]{
+	font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+    border: 1px solid transparent;
+	border-radius: 4px;
+	margin-left: 5px;
+    padding: 6px 12px;
+}
+.content .rightContent>div.chose .delete .deletePanel .deletePanelFooter input[value="确定"]:hover,.content .rightContent>div.chose .delete .deletePanel .deletePanelFooter input[value="取消"]:hover{
+	opacity:0.7;
+}
+.content .rightContent>div.chose .delete .deletePanel .deletePanelFooter input[value="确定"]{
+    background-color: #337ab7;
+	border-color: #2e6da4;
+	color: #fff;
+}
+.content .rightContent>div.chose .delete .deletePanel .deletePanelFooter input[value="取消"]{
+	background-color: #fff;
+	border-color: #ccc;
+	color: #333
+}
+
+.content .rightContent>div.chose .choseBody .choseBodyList{
+	padding: 5px;
+}
+.content .rightContent>div.chose .choseBody .choseBodyList li{
+	padding: 10px 15px;
+    margin-bottom: -1px;
+	border: 1px solid #ddd;
+	position: relative;
+}
+.content .rightContent>div.chose .choseBody .choseBodyList li input{
+	padding: 3px 8px;
+	border-radius: 3px;
+	color: #fff;
+    background-color: #d9534f;
+	border-color: #d43f3a;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+}
+.content .rightContent>div.chose .choseBody .choseBodyList li:first-child{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.rightContent>div.chose .choseBody .choseBodyList li:last-child{
+	border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.content .rightContent>div.chose .choseBody .choseBodyList li:hover{
+	background-color: rgb(233, 227, 227);
+	border-radius: 3px;
+}
+
+#myForm{
+	margin:10px;
+	border: 1px solid #DCE27B;
+	padding: 15px 20px;
+	border-radius: 4px;
+}
+#myForm label{
+	display: block;
+	padding: 1px;
+}
+#myForm label input,#myForm label select{
+	width:200px;
+	height: 28px;
+	border:1px solid #CDBFE3;
+	border-radius: 4px;
+}
+#myForm label input[type="radio"]{
+	width: 20px;
+	height: 16px;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+}
+#myForm label span{
+	display: inline-block;
+	width: 80px;
+	text-align: right;	
+}
+
+#confirmbutton{
+	text-align:center;
+}
+#confirmbutton input{
+	font-size:18px;
+	padding: 3px 8px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    text-align: center;
+    cursor: pointer;
+}
+#confirmbutton input:hover{
+	box-shadow: 2px 2px 2px black;
+}
