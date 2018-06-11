@@ -1,24 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
   <head>
-    <title>Bootstrap 101 Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="js/html5shiv.min.js"></script>
-        <script src="js/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link href="css/myIndex.css" rel="stylesheet">
+    <title>myIndex html</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+  <body>
+	<div class="nav">
+		<ul class="navbar" id="navbar">
+			<li class="header active">主题</li>
+			<li>导航1</li>
+			<li>导航2</li>
+			<li>导航3</li>
+		</ul>
+	</div>
+	
+	<div class="showSection" id="showSection">
+		<div class="wrap">
+			<h1>主题</h1>
+			<p>22.备品柜标识不一致，两黑一绿，一开胶，一膜破，一角破。23.食品柜标识一开胶、一脏</p>
+		</div>
+		<div class="wrap">
+			<h1>导航1</h1>
+			<p>22.备品柜标识不一致，两黑一绿，一开胶，一膜破，一角破。23.食品柜标识一开胶、一脏</p>
+		</div>
+		<div class="wrap">
+			<h1>导航2</h1>
+			<p>22.备品柜标识不一致，两黑一绿，一开胶，一膜破，一角破。23.食品柜标识一开胶、一脏</p>
+		</div>
+		<div class="wrap">
+				<h1>导航3</h1>
+				<p>22.备品柜标识不一致，两黑一绿，一开胶，一膜破，一角破。23.食品柜标识一开胶、一脏</p>
+			</div>
+	</div>
+
+	<div class="content">
+		<div class="leftNav" id="leftNav">
+			<ul>
+				<li class="selected">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+		<div class="rightContent" id="rightContent">
+			<div class="chose">
+				<div class="choseHeader">标题1</div>
+				<div class="choseBody">
+					<table class="choseBodyTable" id="choseBodyTable">
+						<thead>
+							<tr style="text-align: left">
+								<th>序号</th>
+								<th>名称</th>
+								<th>描述</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td><input type="button" value="删除"></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>2</td>
+								<td>2</td>
+								<td><input type="button" value="删除"></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>3</td>
+								<td>3</td>
+								<td><input type="button" value="删除"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="delete" id="deleteDiv0">
+					<div class="deletePanel">
+						<div class="deletePanelHeader">你确定要删除吗？
+							<div class="close" id="close0">x</div>
+						</div>
+						<div class="deletePanelBody">你确定要删除吗?<br>
+							删除后将无法恢复！
+						</div>
+						<div class="deletePanelFooter">
+							<input type="button"value="取消">
+							<input type="button"value="确定">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="choseHeader">标题2</div>
+				<div class="choseBody">
+					<ul class="choseBodyList" id="choseBodyList">
+						<li>1<input type="button" value="删除"></li>
+						<li>2<input type="button" value="删除"></li>
+						<li>3<input type="button" value="删除"></li>
+						<li>4<input type="button" value="删除"></li>
+					</ul>
+				</div>
+				<div class="delete" id="deleteDiv1">
+					<div class="deletePanel">
+						<div class="deletePanelHeader">你确定要删除吗？
+							<div class="close" id="close1">X</div>
+						</div>
+						<div class="deletePanelBody">你确定要删除吗?<br>
+							删除后将无法恢复！
+						</div>
+						<div class="deletePanelFooter">
+							<input type="button"value="取消">
+							<input type="button"value="确定">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="choseHeader">标题3</div>
+				<div class="choseBody">
+					<form id="myForm">
+						<label>
+							<span>用户名：</span>
+							<input type="text">
+						</label>
+						<label>
+							<span>密码：</span>
+							<input type="password">
+						</label>
+						<label>
+							<span>确认密码：</span>
+							<input type="password">
+						</label>
+						<label>
+							<span>姓名：</span>
+							<input type="text">
+						</label>
+						<label>
+							<span>性别：</span>
+							<input type="radio" name="sex" value="男">男
+							<input type="radio" name="sex" value="女">女
+						</label>
+						<label>
+							<span>出生日期：</span>
+							<input type="date">
+						</label>
+						<label>
+							<span>部门：</span>
+							<select>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+							</select>
+						</label>
+						<label>
+							<span>岗位：</span>
+							<select>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+							</select>
+						</label>
+						<label>
+							<span>手机：</span>
+							<input type="tel">
+						</label>
+						<label>
+							<span>电话：</span>
+							<input type="tel">
+						</label>
+					</form>
+					<div id="confirmbutton">
+						<input type="button" value="确定">
+						<input type="button" value="取消">
+					</div>
+				</div>
+			</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+		</div>
+	</div>
+  <script src="js/myIndex.js"></script>
   </body>
 </html>
