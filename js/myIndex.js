@@ -7,6 +7,8 @@ window.onload=function(){
 	var leftNavLis=leftNav.getElementsByTagName("li");
 	var rightContent=document.getElementById("rightContent");
 	var rightContentDivs=rightContent.children;
+	var contentSection=document.getElementById("contentSection");
+	var contentSectionContent=contentSection.getElementsByClassName("content");
 	
 	showSectionWrap[0].style.display="block";
 
@@ -17,6 +19,7 @@ window.onload=function(){
 			for(var i=0;i<navbarLis.length;i++){
 			navbarLis[i].className="";
 			showSectionWrap[i].style.display="none";
+			contentSectionContent[i].style.display="none";
 			}
 			if(this.index==0){
 				this.className="header active";
@@ -26,6 +29,7 @@ window.onload=function(){
 				navbarLis[0].className="header";
 			}
 			showSectionWrap[this.index].style.display="block";
+			contentSectionContent[this.index].style.display="block";
 		}
 	}
 
